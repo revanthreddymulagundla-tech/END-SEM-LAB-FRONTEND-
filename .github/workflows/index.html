@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Notes App</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Notes App</h1>
+      <p class="subtitle">Create, edit, delete notes — stored in your browser</p>
+    </header>
+
+    <main>
+      <form id="noteForm" class="note-form">
+        <input id="title" placeholder="Title (required)" required />
+        <textarea id="content" placeholder="Write your note here..." required></textarea>
+
+        <div class="form-row">
+          <button id="saveBtn" type="submit">Add Note</button>
+          <button id="clearAll" type="button" class="danger">Delete All</button>
+
+          <div class="right-controls">
+            <input id="search" placeholder="Search notes..." />
+            <select id="sortSelect" title="Sort">
+              <option value="new">Newest first</option>
+              <option value="old">Oldest first</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <section id="notesList" class="notes-list"></section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
